@@ -3,13 +3,7 @@ import React from "react";
 
 const Main = (props) => {
   // eslint-disable-next-line react/prop-types
-  const {promoSettings} = props;
-  // eslint-disable-next-line react/prop-types
-  const promoTitle = promoSettings.TITLE;
-  // eslint-disable-next-line react/prop-types
-  const promoTGenre = promoSettings.GENRE;
-  // eslint-disable-next-line react/prop-types
-  const promoYear = promoSettings.YEAR;
+  const {promoSettings: {TITLE: promoTitle, GENRE: promoGenre, YEAR: promoYear}} = props;
 
   return (
     <>
@@ -54,7 +48,7 @@ const Main = (props) => {
             <div className="movie-card__desc">
               <h2 className="movie-card__title">{promoTitle}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{promoTGenre}</span>
+                <span className="movie-card__genre">{promoGenre}</span>
                 <span className="movie-card__year">{promoYear}</span>
               </p>
               <div className="movie-card__buttons">
