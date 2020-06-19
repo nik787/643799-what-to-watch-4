@@ -6,7 +6,8 @@ it(`Should Main render correctly`, () => {
   const tree = renderer
     .create(<Main
       promoSettings={{TITLE: `The Grand Budapest Hotel`, GENRE: `Drama`, YEAR: 2014}}
-      films={[`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`]} />)
+      films={[`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`]}
+      openButtonClick={() => {}} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

@@ -2,11 +2,12 @@ import React from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
+const openButtonHandler = () => {};
 
 const App = (props) => {
   const {promoFilm, films} = props;
   return (
-    <Main promoSettings={promoFilm} films={films} />
+    <Main promoSettings={promoFilm} films={films} openButtonClick={openButtonHandler} />
   );
 };
 

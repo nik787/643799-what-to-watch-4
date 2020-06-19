@@ -3,7 +3,7 @@ import MovieCard from "../movieCard/movieCard.jsx";
 import PropTypes from "prop-types";
 
 const Main = (props) => {
-  const {promoSettings: {TITLE: promoTitle, GENRE: promoGenre, YEAR: promoYear}, films} = props;
+  const {promoSettings: {TITLE: promoTitle, GENRE: promoGenre, YEAR: promoYear}, films, openButtonClick} = props;
 
   return (
     <>
@@ -108,7 +108,7 @@ const Main = (props) => {
 
           <div className="catalog__movies-list">
             {films.map((film) => (
-              <MovieCard title={film} key={film} />
+              <MovieCard title={film} key={film} openFilm={openButtonClick} />
             ))}
           </div>
 
@@ -141,7 +141,8 @@ Main.propTypes = {
     GENRE: PropTypes.string.isRequired,
     YEAR: PropTypes.number.isRequired
   }).isRequired,
-  films: PropTypes.array.isRequired
+  films: PropTypes.array.isRequired,
+  openButtonClick: PropTypes.func.isRequired
 };
 
 export default Main;
