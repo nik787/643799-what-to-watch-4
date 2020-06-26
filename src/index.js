@@ -8,7 +8,9 @@ const promoFilmSettings = {
   YEAR: 2014
 };
 
+const FILMS = [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`];
+
 ReactDOM.render(
-    <App promoFilm={promoFilmSettings} />,
+    <App promoFilm={promoFilmSettings} films={FILMS} />,
     document.querySelector(`#root`)
 );
