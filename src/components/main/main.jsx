@@ -1,5 +1,5 @@
 import React from "react";
-import MovieCard from "../movieCard/movieCard.jsx";
+import MovieCards from "../movieCards/movieCards.jsx";
 import PropTypes from "prop-types";
 
 const Main = (props) => {
@@ -107,9 +107,7 @@ const Main = (props) => {
           </ul>
 
           <div className="catalog__movies-list">
-            {films.map((film) => (
-              <MovieCard title={film} key={film} openFilm={openButtonClick} />
-            ))}
+            <MovieCards movies={films} openButtonClick={openButtonClick} />
           </div>
 
           <div className="catalog__more">

@@ -9,9 +9,11 @@ Enzyme.configure({
 
 it(`Should welcome button be pressed`, () => {
   const openButtonClick = jest.fn();
+  const film = ``;
 
   const welcomeScreen = shallow(
       <MovieCard
+        title={film}
         openFilm={openButtonClick} />
   );
 
