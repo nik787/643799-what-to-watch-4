@@ -8,18 +8,18 @@ Enzyme.configure({
 });
 
 it(`Should welcome button be pressed`, () => {
-  const openButtonClick = jest.fn();
+  const handlerFilmTitleClick = jest.fn();
   const film = ``;
 
   const welcomeScreen = shallow(
       <MovieCard
         title={film}
-        openFilm={openButtonClick} />
+        openFilm={handlerFilmTitleClick} />
   );
 
   const welcomeButton = welcomeScreen.find(`.small-movie-card__link`);
 
   welcomeButton.props().onClick();
 
-  expect(openButtonClick.mock.calls.length).toBe(1);
+  expect(handlerFilmTitleClick.mock.calls.length).toBe(1);
 });

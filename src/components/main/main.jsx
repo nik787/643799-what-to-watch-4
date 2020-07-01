@@ -139,7 +139,7 @@ Main.propTypes = {
     GENRE: PropTypes.string.isRequired,
     YEAR: PropTypes.number.isRequired
   }).isRequired,
-  films: PropTypes.array.isRequired,
+  films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   openButtonClick: PropTypes.func.isRequired
 };
 

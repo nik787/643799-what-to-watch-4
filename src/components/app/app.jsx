@@ -2,12 +2,12 @@ import React from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-const openButtonHandler = () => {};
+const handlerFilmTitleClick = () => {};
 
 const App = (props) => {
   const {promoFilm, films} = props;
   return (
-    <Main promoSettings={promoFilm} films={films} openButtonClick={openButtonHandler} />
+    <Main promoSettings={promoFilm} films={films} openButtonClick={handlerFilmTitleClick} />
   );
 };
 
@@ -17,7 +17,7 @@ App.propTypes = {
     GENRE: PropTypes.string.isRequired,
     YEAR: PropTypes.number.isRequired
   }).isRequired,
-  films: PropTypes.array.isRequired
+  films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 };
 
 export default App;
