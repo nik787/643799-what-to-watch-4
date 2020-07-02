@@ -3,7 +3,7 @@ import MovieCards from "../movieCards/movieCards.jsx";
 import PropTypes from "prop-types";
 
 const Main = (props) => {
-  const {promoSettings: {TITLE: promoTitle, GENRE: promoGenre, YEAR: promoYear}, films} = props;
+  const {promoSettings: {TITLE: promoTitle, GENRE: promoGenre, YEAR: promoYear}, films, openButtonClick} = props;
 
   return (
     <>
@@ -107,7 +107,7 @@ const Main = (props) => {
           </ul>
 
           <div className="catalog__movies-list">
-            <MovieCards movies={films} />
+            <MovieCards movies={films} onOpenButtonClick={openButtonClick} />
           </div>
 
           <div className="catalog__more">
@@ -139,7 +139,8 @@ Main.propTypes = {
     GENRE: PropTypes.string.isRequired,
     YEAR: PropTypes.number.isRequired
   }).isRequired,
-  films: PropTypes.array.isRequired
+  films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  openButtonClick: PropTypes.func.isRequired
 };
 
 export default Main;
