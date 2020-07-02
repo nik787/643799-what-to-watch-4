@@ -23,8 +23,6 @@ exports[`Should MovieCard render correctly 1`] = `
       onClick={[Function]}
     >
       Fantastic Beasts
-      Bohemian Rhapsody
-      Macbeth
     </a>
   </h3>
 </article>
