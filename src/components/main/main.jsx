@@ -107,7 +107,7 @@ const Main = (props) => {
           </ul>
 
           <div className="catalog__movies-list">
-            <MovieCards movies={films} openButtonClick={openButtonClick} />
+            <MovieCards movies={films} onOpenButtonClick={openButtonClick} />
           </div>
 
           <div className="catalog__more">
