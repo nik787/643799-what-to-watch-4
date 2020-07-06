@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MovieCards from "./movieCards.jsx";
+import MovieCards from "./movie-cards.jsx";
 
 it(`Should MovieCards render correctly`, () => {
   const tree = renderer
