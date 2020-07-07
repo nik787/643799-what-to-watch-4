@@ -105,11 +105,7 @@ const Main = (props) => {
               <a href="#" className="catalog__genres-link">Thrillers</a>
             </li>
           </ul>
-
-          <div className="catalog__movies-list">
-            <MovieCards movies={films} onOpenButtonClick={openButtonClick} />
-          </div>
-
+          <MovieCards movies={films} onOpenButtonClick={openButtonClick} />
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
           </div>
@@ -139,7 +135,10 @@ Main.propTypes = {
     GENRE: PropTypes.string.isRequired,
     YEAR: PropTypes.number.isRequired
   }).isRequired,
-  films: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
+  }).isRequired).isRequired,
   openButtonClick: PropTypes.func.isRequired
 };
 

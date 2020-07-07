@@ -3,23 +3,33 @@ import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import MovieCard from "./movie-card";
 
+const movie = {
+  title: `Fantastic Beasts`,
+  src: `movie-image`,
+};
+
 Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should welcome button be pressed`, () => {
-  const handlerFilmTitleClick = jest.fn();
-  const film = ``;
+describe(`MovieCard e2e tests`, () => {
+  it(`MovieCard be hovered`, () => {
+    const onCardHover = jest.fn((args) => args);
 
-  const welcomeScreen = shallow(
-      <MovieCard
-        title={film}
-        openFilm={handlerFilmTitleClick} />
-  );
+    const mainComponent = shallow(
+        <MovieCard
+          movie={movie}
+          onTitleClick={() => {}}
+          onCardHover={onCardHover} />
+    );
 
-  const welcomeButton = welcomeScreen.find(`.small-movie-card__link`);
+    const movieCards = mainComponent.find(`.small-movie-card`);
 
-  welcomeButton.props().onClick();
+    movieCards.forEach((movieCard) => {
+      movieCard.simulate(`mouseover`, movie);
+    });
 
-  expect(handlerFilmTitleClick.mock.calls.length).toBe(1);
+    expect(onCardHover).toHaveBeenCalledTimes(1);
+    expect(onCardHover.mock.calls[0][0]).toMatchObject(movie);
+  });
 });

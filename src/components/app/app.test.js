@@ -2,6 +2,25 @@ import React from "react";
 import renderer from "react-test-renderer";
 import App from "./app.jsx";
 
+const movies = [
+  {
+    src: `image-1`,
+    title: `title-1`
+  },
+  {
+    src: `image-2`,
+    title: `title-2`
+  },
+  {
+    src: `image-3`,
+    title: `title-3`
+  },
+  {
+    src: `image-4`,
+    title: `title-4`
+  }
+];
+
 it(`Render App`, () => {
   const tree = renderer
     .create(<App
@@ -10,7 +29,7 @@ it(`Render App`, () => {
         GENRE: `Drama`,
         YEAR: 2014
       }}
-      films={[`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`]}
+      films={movies}
     />).toJSON();
 
   expect(tree).toMatchSnapshot();
