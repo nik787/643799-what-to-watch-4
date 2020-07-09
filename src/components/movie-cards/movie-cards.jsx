@@ -20,9 +20,9 @@ class MovieCards extends PureComponent {
             movie={film}
             key={index + `${film.title}`}
             onTitleClick={onOpenButtonClick}
-            onCardHover={() => {
+            onCardHover={(selectFilm) => {
               this.setState({
-                currentMovie: film
+                currentMovie: selectFilm
               });
             }} />
         ))}

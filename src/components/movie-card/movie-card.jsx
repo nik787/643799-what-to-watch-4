@@ -10,7 +10,7 @@ class MovieCard extends PureComponent {
     const {movie: {title, src}, onTitleClick, onCardHover} = this.props;
 
     return (
-      <article className="small-movie-card catalog__movies-card" onMouseOver={onCardHover}
+      <article className="small-movie-card catalog__movies-card" onMouseOver={() => onCardHover(this.props.movie)}
       >
         <div className="small-movie-card__image">
           <img src={src} alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />

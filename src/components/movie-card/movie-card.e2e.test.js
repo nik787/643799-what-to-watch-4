@@ -24,7 +24,7 @@ describe(`MovieCard e2e tests`, () => {
     );
 
     const movieCard = mainComponent.find(`.small-movie-card`).at(0);
-    movieCard.simulate(`mouseover`, movie);
+    movieCard.simulate(`mouseover`);
 
     expect(onCardHover).toHaveBeenCalledTimes(1);
     expect(onCardHover.mock.calls[0][0]).toMatchObject(movie);
