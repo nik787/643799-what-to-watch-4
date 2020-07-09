@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.jsx";
+import MovieCards from "./movie-cards.jsx";
 
 const movies = [
   {
@@ -21,16 +21,13 @@ const movies = [
   }
 ];
 
-it(`Render App`, () => {
+it(`Should MovieCards render correctly`, () => {
   const tree = renderer
-    .create(<App
-      promoFilm={{
-        TITLE: `The Grand Budapest Hotel`,
-        GENRE: `Drama`,
-        YEAR: 2014
-      }}
-      films={movies}
-    />).toJSON();
+    .create(<MovieCards
+      movies={movies}
+      onOpenButtonClick={() => {}} />)
+    .toJSON();
 
   expect(tree).toMatchSnapshot();
 });
+

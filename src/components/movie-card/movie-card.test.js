@@ -1,13 +1,18 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MovieCard from "./movieCard.jsx";
+import MovieCard from "./movie-card.jsx";
+
+const movie = {
+  title: `Fantastic Beasts`,
+  src: `movie-image`,
+};
 
 it(`Should MovieCard render correctly`, () => {
-  // const film = jest.fn().mockReturnValue(`Fantastic Beasts`);
   const tree = renderer
     .create(<MovieCard
-      title={`Fantastic Beasts`}
-      openFilm={() => {}} />)
+      movie={movie}
+      onTitleClick={() => {}}
+      onCardHover={() => {}} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

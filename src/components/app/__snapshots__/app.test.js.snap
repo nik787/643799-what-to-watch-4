@@ -367,6 +367,7 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -374,7 +375,7 @@ Array [
             <img
               alt="Fantastic Beasts: The Crimes of Grindelwald"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="image-1"
               width="280"
             />
           </div>
@@ -386,12 +387,13 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              Fantastic Beasts
+              title-1
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -399,7 +401,7 @@ Array [
             <img
               alt="Fantastic Beasts: The Crimes of Grindelwald"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="image-2"
               width="280"
             />
           </div>
@@ -411,12 +413,13 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              Bohemian Rhapsody
+              title-2
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -424,7 +427,7 @@ Array [
             <img
               alt="Fantastic Beasts: The Crimes of Grindelwald"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="image-3"
               width="280"
             />
           </div>
@@ -436,7 +439,33 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              Macbeth
+              title-3
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              height="175"
+              src="image-4"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+              onClick={[Function]}
+            >
+              title-4
             </a>
           </h3>
         </article>
