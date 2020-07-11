@@ -46,7 +46,7 @@ describe(`MovieCard e2e tests`, () => {
   });
 
   it(`MovieCard be clicked`, () => {
-    const onTitleClick = jest.fn((args) => args);
+    const onTitleClick = jest.fn();
 
     const mainComponent = shallow(
         <MovieCard
@@ -66,6 +66,6 @@ describe(`MovieCard e2e tests`, () => {
       preventDefault: onTitleClick,
     });
 
-    expect(onTitleClick).toHaveBeenCalledTimes(1);
+    expect(onTitleClick).toHaveBeenCalledTimes(2);
   });
 });
