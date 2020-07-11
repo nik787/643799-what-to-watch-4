@@ -47,6 +47,7 @@ describe(`MovieCard e2e tests`, () => {
 
   it(`MovieCard be clicked`, () => {
     const onTitleClick = jest.fn();
+    const preventDefault = jest.fn();
 
     const mainComponent = shallow(
         <MovieCard
@@ -58,14 +59,15 @@ describe(`MovieCard e2e tests`, () => {
     const movieCard = mainComponent.find(`.small-movie-card`).at(0);
     const movieTitle = movieCard.find(`.small-movie-card__link`);
     movieTitle.simulate(`click`, {
-      preventDefault: onTitleClick,
+      preventDefault,
     });
 
     const movieImage = movieCard.find(`.small-movie-card__image`);
     movieImage.simulate(`click`, {
-      preventDefault: onTitleClick,
+      preventDefault,
     });
 
-    expect(onTitleClick).toHaveBeenCalledTimes(4);
+    expect(onTitleClick).toHaveBeenCalledTimes(2);
+    expect(preventDefault).toHaveBeenCalledTimes(2);
   });
 });
