@@ -56,7 +56,7 @@ describe(`MovieCard e2e tests`, () => {
     );
 
     const movieCard = mainComponent.find(`.small-movie-card`).at(0);
-    const movieTitle = movieCard.find(`.small-movie-card__title`);
+    const movieTitle = movieCard.find(`.small-movie-card__link`);
     movieTitle.simulate(`click`, {
       preventDefault: onTitleClick,
     });
@@ -66,6 +66,6 @@ describe(`MovieCard e2e tests`, () => {
       preventDefault: onTitleClick,
     });
 
-    expect(onTitleClick).toHaveBeenCalledTimes(2);
+    expect(onTitleClick).toHaveBeenCalledTimes(4);
   });
 });
