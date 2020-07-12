@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {propTypesMovie} from "../../mocks/films.js";
 
 
 const MoviePage = ({movieCard}) => {
   const ratingDescription = (rating) => {
+    switch (rating) {
+      case rating < 3
+    }
     let result = ``;
     if (rating < 3) {
       result = `Bad`;
-    } else if (rating >= 3 && rating < 5) {
+    } else if (rating < 5) {
       result = `Normal`;
-    } else if (rating >= 5 && rating < 8) {
+    } else if (rating < 8) {
       result = `Good`;
-    } else if (rating >= 8 && rating < 10) {
+    } else if (rating < 10) {
       result = `Very good`;
     } else if (rating === 10) {
       result = `Awesome`;
@@ -175,25 +179,7 @@ const MoviePage = ({movieCard}) => {
 };
 
 MoviePage.propTypes = {
-  movieCard: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    posterImage: PropTypes.string.isRequired,
-    previewImage: PropTypes.string.isRequired,
-    backgroundImage: PropTypes.string.isRequired,
-    backgroundColor: PropTypes.string.isRequired,
-    videoLink: PropTypes.string.isRequired,
-    previewVideoLink: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    scoresCount: PropTypes.number.isRequired,
-    director: PropTypes.string.isRequired,
-    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    runTime: PropTypes.number.isRequired,
-    genre: PropTypes.string.isRequired,
-    released: PropTypes.number.isRequired,
-    isFavorite: PropTypes.bool.isRequired
-  }).isRequired
+  movieCard: PropTypes.shape(propTypesMovie).isRequired
 };
 
 export default MoviePage;
