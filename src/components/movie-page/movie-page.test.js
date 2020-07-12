@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MovieCard from "./movie-card.jsx";
+import MoviePage from "./movie-page.jsx";
 
 const movie = {
-  id: 2,
-  name: `Терминатор`,
+  id: 3,
+  name: `Фиксики`,
   posterImage: `https://api.adorable.io/avatars/128/1`,
   previewImage: `https://api.adorable.io/avatars/128/1`,
   backgroundImage: `https://api.adorable.io/avatars/128/1`,
@@ -22,14 +22,13 @@ const movie = {
   isFavorite: false
 };
 
-it(`Should MovieCard render correctly`, () => {
-  const tree = renderer
-    .create(<MovieCard
-      movie={movie}
-      onTitleClick={() => {}}
-      onCardHover={() => {}} />)
-    .toJSON();
+describe(`MoviePage`, () => {
+  it(`Should render correctly`, () => {
+    const tree = renderer
+      .create(<MoviePage
+        movieCard={movie} />)
+      .toJSON();
 
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
 });
-

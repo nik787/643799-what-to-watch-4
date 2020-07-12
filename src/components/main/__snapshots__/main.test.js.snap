@@ -179,7 +179,7 @@ Array [
           <img
             alt="The Grand Budapest Hotel poster"
             height="327"
-            src="img/the-grand-budapest-hotel-poster.jpg"
+            src="https://api.adorable.io/avatars/128/1"
             width="218"
           />
         </div>
@@ -189,7 +189,7 @@ Array [
           <h2
             className="movie-card__title"
           >
-            The Grand Budapest Hotel
+            Терминатор
           </h2>
           <p
             className="movie-card__meta"
@@ -197,7 +197,7 @@ Array [
             <span
               className="movie-card__genre"
             >
-              Drama
+              Comedy
             </span>
             <span
               className="movie-card__year"
@@ -371,11 +371,12 @@ Array [
         >
           <div
             className="small-movie-card__image"
+            onClick={[Function]}
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="The Grand Budapest Hotel"
               height="175"
-              src="image-1"
+              src="https://api.adorable.io/avatars/128/1"
               width="280"
             />
           </div>
@@ -387,7 +388,7 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              title-1
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -397,11 +398,12 @@ Array [
         >
           <div
             className="small-movie-card__image"
+            onClick={[Function]}
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Терминатор"
               height="175"
-              src="image-2"
+              src="https://api.adorable.io/avatars/128/1"
               width="280"
             />
           </div>
@@ -413,59 +415,7 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              title-2
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseOver={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="image-3"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              title-3
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseOver={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height="175"
-              src="image-4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              title-4
+              Терминатор
             </a>
           </h3>
         </article>

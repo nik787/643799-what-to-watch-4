@@ -1,9 +1,11 @@
 import React from "react";
 import MovieCards from "../movie-cards/movie-cards.jsx";
 import PropTypes from "prop-types";
+import {propTypesMovie} from "../../data-types/film.js";
+
 
 const Main = (props) => {
-  const {promoSettings: {TITLE: promoTitle, GENRE: promoGenre, YEAR: promoYear}, films, openButtonClick} = props;
+  const {promoSettings, films, openButtonClick} = props;
 
   return (
     <>
@@ -42,14 +44,14 @@ const Main = (props) => {
         <div className="movie-card__wrap">
           <div className="movie-card__info">
             <div className="movie-card__poster">
-              <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width="218" height="327" />
+              <img src={promoSettings.posterImage} alt="The Grand Budapest Hotel poster" width="218" height="327" />
             </div>
 
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{promoTitle}</h2>
+              <h2 className="movie-card__title">{promoSettings.name}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{promoGenre}</span>
-                <span className="movie-card__year">{promoYear}</span>
+                <span className="movie-card__genre">{promoSettings.genre}</span>
+                <span className="movie-card__year">{promoSettings.released}</span>
               </p>
               <div className="movie-card__buttons">
                 <button className="btn btn--play movie-card__button" type="button">
@@ -130,15 +132,8 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  promoSettings: PropTypes.shape({
-    TITLE: PropTypes.string.isRequired,
-    GENRE: PropTypes.string.isRequired,
-    YEAR: PropTypes.number.isRequired
-  }).isRequired,
-  films: PropTypes.arrayOf(PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
-  }).isRequired).isRequired,
+  promoSettings: propTypesMovie,
+  films: PropTypes.arrayOf(propTypesMovie).isRequired,
   openButtonClick: PropTypes.func.isRequired
 };
 
