@@ -1,13 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {propTypesMovie} from "../../mocks/films.js";
+import {propTypesMovie} from "../../data-types/film.js";
 
 
 const MoviePage = ({movieCard}) => {
   const ratingDescription = (rating) => {
-    switch (rating) {
-      case rating < 3
-    }
     let result = ``;
     if (rating < 3) {
       result = `Bad`;
@@ -179,7 +175,7 @@ const MoviePage = ({movieCard}) => {
 };
 
 MoviePage.propTypes = {
-  movieCard: PropTypes.shape(propTypesMovie).isRequired
+  movieCard: propTypesMovie
 };
 
 export default MoviePage;

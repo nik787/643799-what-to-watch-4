@@ -1,7 +1,7 @@
 import React from "react";
 import MovieCards from "../movie-cards/movie-cards.jsx";
 import PropTypes from "prop-types";
-import {propTypesMovie} from "../../mocks/films.js";
+import {propTypesMovie} from "../../data-types/film.js";
 
 
 const Main = (props) => {
@@ -132,8 +132,8 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  promoSettings: PropTypes.shape(propTypesMovie).isRequired,
-  films: PropTypes.arrayOf(PropTypes.shape(propTypesMovie).isRequired).isRequired,
+  promoSettings: propTypesMovie,
+  films: PropTypes.arrayOf(propTypesMovie).isRequired,
   openButtonClick: PropTypes.func.isRequired
 };
 
