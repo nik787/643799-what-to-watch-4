@@ -4,7 +4,7 @@ import {propTypesMovie} from "../../data-types/film.js";
 import VideoPlayer from "../video-player/video-player.jsx";
 
 
-class MovieCard extends PureComponent {
+export default class MovieCard extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -31,7 +31,7 @@ class MovieCard extends PureComponent {
           this.setState({
             isPlaying: true,
           });
-          onCardHover();
+          onCardHover(movie);
         }}
         onMouseOut={() => {
           this.setState({
@@ -58,4 +58,3 @@ MovieCard.propTypes = {
   onCardHover: PropTypes.func.isRequired,
 };
 
-export default MovieCard;

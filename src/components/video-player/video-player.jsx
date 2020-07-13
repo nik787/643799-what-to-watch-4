@@ -68,5 +68,6 @@ VideoPlayer.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
   source: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
+  isMuted: PropTypes.bool.isRequired,
 };
 

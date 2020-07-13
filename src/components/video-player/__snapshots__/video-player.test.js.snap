@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoPlayer Should render correctly 1`] = `
+<video
+  height={175}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  width={280}
+>
+  Soory, your browser doesn't support video.
+</video>
+`;

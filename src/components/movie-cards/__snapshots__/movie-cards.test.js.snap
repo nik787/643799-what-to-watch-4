@@ -6,18 +6,21 @@ exports[`Should MovieCards render correctly 1`] = `
 >
   <article
     className="small-movie-card catalog__movies-card"
-    onMouseOver={[Function]}
+    onMouseEnter={[Function]}
+    onMouseOut={[Function]}
   >
     <div
       className="small-movie-card__image"
       onClick={[Function]}
     >
-      <img
-        alt="The Grand Budapest Hotel"
-        height="175"
-        src="https://api.adorable.io/avatars/128/1"
-        width="280"
-      />
+      <video
+        height={175}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        width={280}
+      >
+        Soory, your browser doesn't support video.
+      </video>
     </div>
     <h3
       className="small-movie-card__title"
@@ -33,18 +36,21 @@ exports[`Should MovieCards render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
-    onMouseOver={[Function]}
+    onMouseEnter={[Function]}
+    onMouseOut={[Function]}
   >
     <div
       className="small-movie-card__image"
       onClick={[Function]}
     >
-      <img
-        alt="Терминатор"
-        height="175"
-        src="https://api.adorable.io/avatars/128/1"
-        width="280"
-      />
+      <video
+        height={175}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        width={280}
+      >
+        Soory, your browser doesn't support video.
+      </video>
     </div>
     <h3
       className="small-movie-card__title"
